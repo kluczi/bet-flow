@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		98BBF2352DD3F97B0059D188 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 98BBF2342DD3F97B0059D188 /* .gitignore */; };
+		98BBF2672DD3F9C40059D188 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 98BBF2662DD3F9C40059D188 /* Config.xcconfig */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		98BBF1FB2DD3F4B80059D188 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +32,26 @@
 		98BBF1EA2DD3F4B60059D188 /* BetFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BBF1FA2DD3F4B80059D188 /* BetFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BBF2042DD3F4B80059D188 /* BetFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98BBF2342DD3F97B0059D188 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		98BBF2662DD3F9C40059D188 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		98BBF2692DD3F9F70059D188 /* Exceptions for "BetFlow" folder in "BetFlow" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 98BBF1E92DD3F4B60059D188 /* BetFlow */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		98BBF1EC2DD3F4B60059D188 /* BetFlow */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				98BBF2692DD3F9F70059D188 /* Exceptions for "BetFlow" folder in "BetFlow" target */,
+			);
 			path = BetFlow;
 			sourceTree = "<group>";
 		};
@@ -75,6 +95,8 @@
 		98BBF1E12DD3F4B60059D188 = {
 			isa = PBXGroup;
 			children = (
+				98BBF2662DD3F9C40059D188 /* Config.xcconfig */,
+				98BBF2342DD3F97B0059D188 /* .gitignore */,
 				98BBF1EC2DD3F4B60059D188 /* BetFlow */,
 				98BBF1FD2DD3F4B80059D188 /* BetFlowTests */,
 				98BBF2072DD3F4B80059D188 /* BetFlowUITests */,
@@ -212,6 +234,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98BBF2672DD3F9C40059D188 /* Config.xcconfig in Resources */,
+				98BBF2352DD3F97B0059D188 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +295,7 @@
 /* Begin XCBuildConfiguration section */
 		98BBF20C2DD3F4B80059D188 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98BBF2662DD3F9C40059D188 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -334,6 +359,7 @@
 		};
 		98BBF20D2DD3F4B80059D188 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98BBF2662DD3F9C40059D188 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -398,6 +424,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BetFlow/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BetFlow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,6 +453,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BetFlow/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BetFlow/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
