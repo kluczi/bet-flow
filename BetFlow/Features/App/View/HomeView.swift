@@ -10,13 +10,18 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         TabView {
-            BetsView()
+            MatchesView()
                 .tabItem {
                     Label("Zakłady", systemImage: "tennisball.fill")
                 }
             StatsView()
                 .tabItem {
                     Label("Statystyki", systemImage: "chart.bar")
+                }
+            
+            BetsView()
+                .tabItem{
+                    Label("Zakłady", systemImage: "note")
                 }
             
             ProfileView()

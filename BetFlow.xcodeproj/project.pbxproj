@@ -37,7 +37,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		98BBF2692DD3F9F70059D188 /* Exceptions for "BetFlow" folder in "BetFlow" target */ = {
+		9802A2F22DD40219009D8C82 /* Exceptions for "BetFlow" folder in "BetFlow" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -50,7 +50,7 @@
 		98BBF1EC2DD3F4B60059D188 /* BetFlow */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				98BBF2692DD3F9F70059D188 /* Exceptions for "BetFlow" folder in "BetFlow" target */,
+				9802A2F22DD40219009D8C82 /* Exceptions for "BetFlow" folder in "BetFlow" target */,
 			);
 			path = BetFlow;
 			sourceTree = "<group>";
@@ -217,6 +217,8 @@
 			);
 			mainGroup = 98BBF1E12DD3F4B60059D188;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 98BBF1EB2DD3F4B60059D188 /* Products */;
 			projectDirPath = "";
