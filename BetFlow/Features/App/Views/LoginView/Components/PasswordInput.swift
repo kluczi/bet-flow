@@ -24,7 +24,7 @@ struct PasswordInput: View {
             ZStack(alignment: .leading) {
                 if password.isEmpty {
                     Text(placeholder)
-                        .foregroundColor(Color.secondaryFont.opacity(0.8))
+                        .foregroundColor(Color.secondaryFontColor.opacity(0.8))
                         .padding(.leading, 10)
                 }
                 
@@ -36,7 +36,7 @@ struct PasswordInput: View {
                     }
                 }
                 .padding(.horizontal, 10)
-                .foregroundColor(Color.primaryFont)
+                .foregroundColor(Color.primaryFontColor)
                 .textInputAutocapitalization(.never)
                 .disableAutocorrection(true)
             }
@@ -52,7 +52,7 @@ struct PasswordInput: View {
         .frame(minHeight: 50)
         .background(
             RoundedRectangle(cornerRadius: 8)
-                .fill(Color.primaryBgColor)
+                .fill(Color.secondaryColor)
         )
         .overlay(
             RoundedRectangle(cornerRadius: 8)

@@ -8,13 +8,7 @@
 import SwiftUI
 import Appwrite
 
-class ViewModel: ObservableObject {
-    @Published var email: String = ""
-    @Published var password: String = ""
-}
-
 struct ContentView: View {
-    @ObservedObject var viewModel = ViewModel()
     let appwrite = Appwrite()
     
     @State private var isLoggedIn = false
@@ -23,23 +17,12 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                TextField("Email", text: $viewModel.email)
-                    .textFieldStyle(.roundedBorder)
-                    .textInputAutocapitalization(.never)
-                    .disableAutocorrection(true)
-                SecureField("Password", text: $viewModel.password)
-                    .textFieldStyle(.roundedBorder)
-                
-                if let errorMessage {
-                    Text(errorMessage)
-                        .foregroundColor(.red)
-                }
-                
-                Button("Login") {
+                LoginForm { email, password in
                     Task {
                         do {
-                            _ = try await appwrite.onLogin(viewModel.email, viewModel.password)
+                            _ = try await appwrite.onLogin(email, password)
                             isLoggedIn = true
+                            errorMessage = nil
                         } catch let error as AppwriteError {
                             errorMessage = "Login failed: \(error.message)"
                         } catch {
@@ -47,29 +30,42 @@ struct ContentView: View {
                         }
                     }
                 }
-                .padding(.top)
                 
+                if let errorMessage {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .padding(.top, 8)
+                }
                 
+                //                if isLoggedIn {
                 Button("Logout") {
-                               Task {
-                                   do {
-                                       try await appwrite.onLogout()
-                                       isLoggedIn = false
-                                   } catch let error as AppwriteError {
-                                       print("Logout failed: \(error.message)")
-                                   } catch {
-                                       print("Unexpected error: \(error.localizedDescription)")
-                                   }
-                               }
-                           }
-                           .padding()
-                           .buttonStyle(.bordered)
+                    Task {
+                        do {
+                            try await appwrite.onLogout()
+                            isLoggedIn = false
+                        } catch let error as AppwriteError {
+                            print("Logout failed: \(error.message)")
+                        } catch {
+                            print("Unexpected error: \(error.localizedDescription)")
+                        }
+                    }
+                }
+                .padding()
+                .buttonStyle(.bordered)
+                //                }
                 
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.primaryBgColor)
+            .ignoresSafeArea()
             .padding()
             .navigationDestination(isPresented: $isLoggedIn) {
                 HomeView()
-            }}
-        
+            }
+            
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbarBackground(.hidden, for: .navigationBar)
+        .toolbarBackground(Color.clear, for: .navigationBar)
     }
 }

@@ -15,6 +15,7 @@ class LoginViewModel: ObservableObject {
 
 struct LoginForm: View {
     @StateObject private var viewModel = LoginViewModel()
+    var onLogin: (String, String) -> Void
     var body: some View {
         VStack {
             VStack {
@@ -22,22 +23,26 @@ struct LoginForm: View {
                     .foregroundStyle(Color.primaryFontColor)
                 TextInput(value: $viewModel.email, placeholder: "E-mail")
                 PasswordInput(password: $viewModel.password, placeholder: "Password")
+                CustomButton(placeholder: "Login") {
+                    onLogin(viewModel.email, viewModel.password)
+                }
             }
             .padding(8)
         }
-        .frame(minWidth:150, minHeight: 200)
-        .background(Color.primaryBgColor)
+        .frame(minWidth:150, minHeight: 300)
+        .background(Color.mainColor)
         .cornerRadius(12)
-        .padding(.horizontal,16)
+        .padding(.horizontal,12)
         
     }
 }
 
 #Preview {
     ZStack {
-        Color.gray.ignoresSafeArea()
-        LoginForm()
-    }
+        Color.primaryBgColor.ignoresSafeArea()
+        LoginForm { email, password in
+                print("Preview login with \(email), \(password)")
+            }    }
 }
 
 

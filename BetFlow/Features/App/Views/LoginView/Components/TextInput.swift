@@ -27,7 +27,7 @@ struct TextInput: View {
             .frame(minHeight: 50)
             .background(
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.primaryBgColor)
+                    .fill(Color.secondaryColor)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 8)

@@ -14,4 +14,6 @@ extension Color {
     static let primaryFontColor = Color("primaryFontColor")
     static let secondaryFontColor = Color("secondaryFontColor")
     static let profitColor = Color("profitColor")
+    static let borderColor = Color("borderColor")
+
 }
