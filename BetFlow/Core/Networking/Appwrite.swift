@@ -34,12 +34,14 @@ class Appwrite {
     
     public func onRegister(
         _ email: String,
-        _ password: String
+        _ password: String,
+        _ name: String
     ) async throws -> User<[String: AnyCodable]> {
         try await account!.create(
             userId: ID.unique(),
             email: email,
-            password: password
+            password: password,
+            name: name
         )
     }
     

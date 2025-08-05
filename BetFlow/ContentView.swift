@@ -37,7 +37,7 @@ struct ContentView: View {
                     SignupForm { email, password, name in
                         Task {
                             do {
-                                _ = try await appwrite.onRegister(email, password)
+                                _ = try await appwrite.onRegister(email, password, name)
                                 isLoggedIn = false
                                 errorMessage = nil
                             } catch let error as AppwriteError {

@@ -27,6 +27,8 @@ struct SignupForm: View {
                 TextInput(value: $viewModel.email, placeholder: "E-mail")
                
                 PasswordInput(password: $viewModel.password, placeholder: "Password")
+                PasswordInput(password: $viewModel.password, placeholder: "Confirm password")
+                
                 CustomButton(placeholder: "Create account") {
                     onSignup(viewModel.email, viewModel.password, viewModel.name)
                 }
