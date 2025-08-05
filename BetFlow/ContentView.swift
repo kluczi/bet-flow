@@ -12,22 +12,41 @@ struct ContentView: View {
     let appwrite = Appwrite()
     
     @State private var isLoggedIn = false
+    @State private var isLoginMode = true
     @State private var errorMessage: String?
     
     var body: some View {
         NavigationStack {
             VStack {
-                LoginForm { email, password in
-                    Task {
-                        do {
-                            _ = try await appwrite.onLogin(email, password)
-                            isLoggedIn = true
-                            errorMessage = nil
-                        } catch let error as AppwriteError {
-                            errorMessage = "Login failed: \(error.message)"
-                        } catch {
-                            errorMessage = "Unexpected error: \(error.localizedDescription)"
+                ChangeFormToggle(isLoginMode: $isLoginMode)
+                if isLoginMode {
+                    LoginForm { email, password in
+                        Task {
+                            do {
+                                _ = try await appwrite.onLogin(email, password)
+                                isLoggedIn = true
+                                errorMessage = nil
+                            } catch let error as AppwriteError {
+                                errorMessage = "Login failed: \(error.message)"
+                            } catch {
+                                errorMessage = "Unexpected error: \(error.localizedDescription)"
+                            }
                         }
+                    }
+                } else {
+                    SignupForm { email, password, name in
+                        Task {
+                            do {
+                                _ = try await appwrite.onRegister(email, password)
+                                isLoggedIn = false
+                                errorMessage = nil
+                            } catch let error as AppwriteError {
+                                errorMessage = "Login failed: \(error.message)"
+                            } catch {
+                                errorMessage = "Unexpected error: \(error.localizedDescription)"
+                            }
+                        }
+                        
                     }
                 }
                 

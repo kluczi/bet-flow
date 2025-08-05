@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChangeFormToggle: View {
-    @State private var isLoginMode = true
+    @Binding var isLoginMode: Bool 
     var body: some View {
         HStack {
             Button("Login") {
@@ -46,9 +46,9 @@ struct ChangeFormToggle: View {
     }
 }
 
-#Preview {
-    ZStack {
-        Color.primaryBgColor.ignoresSafeArea()
-        ChangeFormToggle()
-    }
-}
+//#Preview {
+//    ZStack {
+//        Color.primaryBgColor.ignoresSafeArea()
+//        ChangeFormToggle()
+//    }
+//}
