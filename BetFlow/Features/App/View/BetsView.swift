@@ -9,8 +9,11 @@ import SwiftUI
 
 struct BetsView: View {
     var body: some View {
-        Text("")
-    }
+        NavigationView {
+            Form {
+               
+            }
+        }    }
 }
 
 #Preview {

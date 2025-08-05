@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9839DE072E423DB700D4D131 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 9839DE062E423DB700D4D131 /* Appwrite */; };
 		98BBF2352DD3F97B0059D188 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 98BBF2342DD3F97B0059D188 /* .gitignore */; };
 		98BBF2672DD3F9C40059D188 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 98BBF2662DD3F9C40059D188 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9839DE072E423DB700D4D131 /* Appwrite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +136,7 @@
 			);
 			name = BetFlow;
 			packageProductDependencies = (
+				9839DE062E423DB700D4D131 /* Appwrite */,
 			);
 			productName = BetFlow;
 			productReference = 98BBF1EA2DD3F4B60059D188 /* BetFlow.app */;
@@ -218,6 +221,7 @@
 			mainGroup = 98BBF1E12DD3F4B60059D188;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				9839DE052E423ADC00D4D131 /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 98BBF1EB2DD3F4B60059D188 /* Products */;
@@ -582,6 +586,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9839DE052E423ADC00D4D131 /* XCRemoteSwiftPackageReference "sdk-for-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appwrite/sdk-for-apple";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9839DE062E423DB700D4D131 /* Appwrite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9839DE052E423ADC00D4D131 /* XCRemoteSwiftPackageReference "sdk-for-apple" */;
+			productName = Appwrite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 98BBF1E22DD3F4B60059D188 /* Project object */;
 }

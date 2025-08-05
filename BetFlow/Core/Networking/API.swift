@@ -42,7 +42,7 @@ final class APIService {
             URLQueryItem(name: "oddsFormat", value: "decimal"),
             URLQueryItem(name: "commenceTimeFrom", value: iso.string(from: commenceFrom)),
             URLQueryItem(name: "commenceTimeTo",   value: iso.string(from: commenceTo)),
-            URLQueryItem(name: "bookmakers", value: "betclic_fr")
+            URLQueryItem(name: "bookmakers", value: "nordicbet")
         ]
 
         guard let url = comps?.url else {

@@ -28,6 +28,10 @@ struct HomeView: View {
                 .tabItem {
                     Label("Profil", systemImage: "person")
                 }
+//            LoginView()
+//                .tabItem {
+//                    Label("Login", systemImage: "person")
+//                }
         }
     }
 }

@@ -4,5 +4,18 @@
 <dict>
 	<key>API_KEY</key>
 	<string>$(API_KEY)</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>io.appwrite</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>appwrite-callback-68482a8f00257c4f1c6d</string>
+        </array>
+    </dict>
+    </array>
 </dict>
 </plist>

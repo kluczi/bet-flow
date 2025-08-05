@@ -7,26 +7,52 @@
 //
 //import SwiftUI
 //
+//class ViewModel: ObservableObject {
+//    @Published var email: String = ""
+//    @Published var password: String = ""
+//}
+//
 //struct LoginView: View {
-//    @StateObject private var viewModel = AuthViewModel()
+//    @ObservedObject var viewModel = ViewModel()
+//    let appwrite = Appwrite()
 //
 //    var body: some View {
 //        VStack {
-//            TextField("Email", text: $viewModel.email)
-//            SecureField("Password", text: $viewModel.password)
-//
-//            Button("Register") {
-//                Task {
-//                    try? await viewModel.register()
+//            TextField(
+//                "Email",
+//                text: $viewModel.email
+//            )
+//            SecureField(
+//                "Password",
+//                text: $viewModel.password
+//            )
+//            Button(
+//                action: { Task {
+//                    try await appwrite.onRegister(
+//                        viewModel.email,
+//                        viewModel.password
+//                    )
+//                }},
+//                label: {
+//                    Text("Register")
 //                }
-//            }
-//
-//            Button("Login") {
-//                Task {
-//                    try? await viewModel.login()
+//            )
+//            Button(
+//                action: { Task {
+//                    try await appwrite.onLogin(
+//                        viewModel.email,
+//                        viewModel.password
+//                    )
+//                }},
+//                label: {
+//                    Text("Login")
 //                }
-//            }
+//            )
 //        }
 //        .padding()
 //    }
+//}
+//
+//#Preview {
+//    LoginView()
 //}

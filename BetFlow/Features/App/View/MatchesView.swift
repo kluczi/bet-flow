@@ -20,10 +20,10 @@ struct MatchesView: View {
                         .foregroundColor(.red)
                 } else {
                     List(vm.events) { event in
-                        Section(header: Text("\(event.sportTitle)").foregroundStyle(Color.primaryColor)) {
+                        Section(header: Text("\(event.sportTitle)").foregroundStyle(Color.mainColor)) {
                             ForEach(event.bookmakers) { bookmaker in
                                 VStack(alignment: .leading) {
-                                    if(bookmaker.key=="betclic_fr") {
+                                    if(bookmaker.key=="nordicbet") {
                                         Image("BetclicIcon")
                                             .resizable()
                                             .scaledToFit()
