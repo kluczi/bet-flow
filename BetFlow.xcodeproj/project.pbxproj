@@ -12,27 +12,8 @@
 		98BBF2672DD3F9C40059D188 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 98BBF2662DD3F9C40059D188 /* Config.xcconfig */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		98BBF1FB2DD3F4B80059D188 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 98BBF1E22DD3F4B60059D188 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98BBF1E92DD3F4B60059D188;
-			remoteInfo = BetFlow;
-		};
-		98BBF2052DD3F4B80059D188 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 98BBF1E22DD3F4B60059D188 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98BBF1E92DD3F4B60059D188;
-			remoteInfo = BetFlow;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		98BBF1EA2DD3F4B60059D188 /* BetFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		98BBF1FA2DD3F4B80059D188 /* BetFlowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetFlowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		98BBF2042DD3F4B80059D188 /* BetFlowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetFlowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BBF2342DD3F97B0059D188 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		98BBF2662DD3F9C40059D188 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,16 +37,6 @@
 			path = BetFlow;
 			sourceTree = "<group>";
 		};
-		98BBF1FD2DD3F4B80059D188 /* BetFlowTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BetFlowTests;
-			sourceTree = "<group>";
-		};
-		98BBF2072DD3F4B80059D188 /* BetFlowUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BetFlowUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,20 +45,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9839DE072E423DB700D4D131 /* Appwrite in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98BBF1F72DD3F4B80059D188 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98BBF2012DD3F4B80059D188 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +57,6 @@
 				98BBF2662DD3F9C40059D188 /* Config.xcconfig */,
 				98BBF2342DD3F97B0059D188 /* .gitignore */,
 				98BBF1EC2DD3F4B60059D188 /* BetFlow */,
-				98BBF1FD2DD3F4B80059D188 /* BetFlowTests */,
-				98BBF2072DD3F4B80059D188 /* BetFlowUITests */,
 				98BBF1EB2DD3F4B60059D188 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,8 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				98BBF1EA2DD3F4B60059D188 /* BetFlow.app */,
-				98BBF1FA2DD3F4B80059D188 /* BetFlowTests.xctest */,
-				98BBF2042DD3F4B80059D188 /* BetFlowUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,52 +95,6 @@
 			productReference = 98BBF1EA2DD3F4B60059D188 /* BetFlow.app */;
 			productType = "com.apple.product-type.application";
 		};
-		98BBF1F92DD3F4B80059D188 /* BetFlowTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 98BBF2112DD3F4B80059D188 /* Build configuration list for PBXNativeTarget "BetFlowTests" */;
-			buildPhases = (
-				98BBF1F62DD3F4B80059D188 /* Sources */,
-				98BBF1F72DD3F4B80059D188 /* Frameworks */,
-				98BBF1F82DD3F4B80059D188 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				98BBF1FC2DD3F4B80059D188 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				98BBF1FD2DD3F4B80059D188 /* BetFlowTests */,
-			);
-			name = BetFlowTests;
-			packageProductDependencies = (
-			);
-			productName = BetFlowTests;
-			productReference = 98BBF1FA2DD3F4B80059D188 /* BetFlowTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		98BBF2032DD3F4B80059D188 /* BetFlowUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 98BBF2142DD3F4B80059D188 /* Build configuration list for PBXNativeTarget "BetFlowUITests" */;
-			buildPhases = (
-				98BBF2002DD3F4B80059D188 /* Sources */,
-				98BBF2012DD3F4B80059D188 /* Frameworks */,
-				98BBF2022DD3F4B80059D188 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				98BBF2062DD3F4B80059D188 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				98BBF2072DD3F4B80059D188 /* BetFlowUITests */,
-			);
-			name = BetFlowUITests;
-			packageProductDependencies = (
-			);
-			productName = BetFlowUITests;
-			productReference = 98BBF2042DD3F4B80059D188 /* BetFlowUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,14 +107,6 @@
 				TargetAttributes = {
 					98BBF1E92DD3F4B60059D188 = {
 						CreatedOnToolsVersion = 16.0;
-					};
-					98BBF1F92DD3F4B80059D188 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 98BBF1E92DD3F4B60059D188;
-					};
-					98BBF2032DD3F4B80059D188 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 98BBF1E92DD3F4B60059D188;
 					};
 				};
 			};
@@ -229,8 +128,6 @@
 			projectRoot = "";
 			targets = (
 				98BBF1E92DD3F4B60059D188 /* BetFlow */,
-				98BBF1F92DD3F4B80059D188 /* BetFlowTests */,
-				98BBF2032DD3F4B80059D188 /* BetFlowUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,20 +142,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98BBF1F82DD3F4B80059D188 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98BBF2022DD3F4B80059D188 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -269,34 +152,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98BBF1F62DD3F4B80059D188 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98BBF2002DD3F4B80059D188 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		98BBF1FC2DD3F4B80059D188 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 98BBF1E92DD3F4B60059D188 /* BetFlow */;
-			targetProxy = 98BBF1FB2DD3F4B80059D188 /* PBXContainerItemProxy */;
-		};
-		98BBF2062DD3F4B80059D188 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 98BBF1E92DD3F4B60059D188 /* BetFlow */;
-			targetProxy = 98BBF2052DD3F4B80059D188 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		98BBF20C2DD3F4B80059D188 /* Debug */ = {
@@ -478,74 +334,6 @@
 			};
 			name = Release;
 		};
-		98BBF2122DD3F4B80059D188 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bartek.BetFlowTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetFlow.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BetFlow";
-			};
-			name = Debug;
-		};
-		98BBF2132DD3F4B80059D188 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bartek.BetFlowTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetFlow.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BetFlow";
-			};
-			name = Release;
-		};
-		98BBF2152DD3F4B80059D188 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bartek.BetFlowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BetFlow;
-			};
-			name = Debug;
-		};
-		98BBF2162DD3F4B80059D188 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = bartek.BetFlowUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BetFlow;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -563,24 +351,6 @@
 			buildConfigurations = (
 				98BBF20F2DD3F4B80059D188 /* Debug */,
 				98BBF2102DD3F4B80059D188 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		98BBF2112DD3F4B80059D188 /* Build configuration list for PBXNativeTarget "BetFlowTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				98BBF2122DD3F4B80059D188 /* Debug */,
-				98BBF2132DD3F4B80059D188 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		98BBF2142DD3F4B80059D188 /* Build configuration list for PBXNativeTarget "BetFlowUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				98BBF2152DD3F4B80059D188 /* Debug */,
-				98BBF2162DD3F4B80059D188 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

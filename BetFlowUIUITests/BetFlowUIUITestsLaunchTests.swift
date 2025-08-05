@@ -1,13 +1,13 @@
 //
-//  BetFlowUITestsLaunchTests.swift
-//  BetFlowUITests
+//  BetFlowUIUITestsLaunchTests.swift
+//  BetFlowUIUITests
 //
-//  Created by Bartek on 13/05/2025.
+//  Created by Bartek on 05/08/2025.
 //
 
 import XCTest
 
-final class BetFlowUITestsLaunchTests: XCTestCase {
+final class BetFlowUIUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
