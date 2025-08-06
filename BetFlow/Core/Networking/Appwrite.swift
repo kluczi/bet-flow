@@ -18,12 +18,12 @@ class Appwrite {
     var account: Account?
     
     public init() {
-        #if DEBUG
+#if DEBUG
         if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] == "1" {
             print("Appwrite unlinked")
             return
         }
-        #endif
+#endif
         
         self.client = Client()
             .setEndpoint("https://fra.cloud.appwrite.io/v1")
@@ -69,8 +69,5 @@ class Appwrite {
             return false
         }
     }
-    
-    
-    
 }
 

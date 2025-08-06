@@ -13,78 +13,75 @@ struct ContentView: View {
     
     @State private var isLoggedIn = false
     @State private var isLoginMode = true
+    @State private var isLoading = true
     @State private var errorMessage: String?
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                ChangeFormToggle(isLoginMode: $isLoginMode)
-                if isLoginMode {
-                    LoginForm { email, password in
+        VStack {
+            if isLoading {
+                ProgressView("Loading...")
+                    .progressViewStyle(.circular)
+            } else {
+                if isLoggedIn {
+                    HomeView(onLogout:{
                         Task {
                             do {
-                                _ = try await appwrite.onLogin(email, password)
-                                isLoggedIn = true
-                                errorMessage = nil
-                            } catch let error as AppwriteError {
-                                errorMessage = "Login failed: \(error.message)"
-                            } catch {
-                                errorMessage = "Unexpected error: \(error.localizedDescription)"
-                            }
-                        }
-                    }
-                } else {
-                    SignupForm { email, password, name in
-                        Task {
-                            do {
-                                _ = try await appwrite.onRegister(email, password, name)
+                                try await appwrite.onLogout()
                                 isLoggedIn = false
-                                errorMessage = nil
-                            } catch let error as AppwriteError {
-                                errorMessage = "Login failed: \(error.message)"
                             } catch {
-                                errorMessage = "Unexpected error: \(error.localizedDescription)"
+                                print("Logout failed: \(error.localizedDescription)")
                             }
                         }
-                        
-                    }
-                }
-                
-                if let errorMessage {
-                    Text(errorMessage)
-                        .foregroundColor(.red)
-                        .padding(.top, 8)
-                }
-                
-                //                if isLoggedIn {
-                Button("Logout") {
-                    Task {
-                        do {
-                            try await appwrite.onLogout()
-                            isLoggedIn = false
-                        } catch let error as AppwriteError {
-                            print("Logout failed: \(error.message)")
-                        } catch {
-                            print("Unexpected error: \(error.localizedDescription)")
+                    })
+                } else {
+                    ChangeFormToggle(isLoginMode: $isLoginMode)
+                    if isLoginMode {
+                        LoginForm { email, password in
+                            Task {
+                                do {
+                                    _ = try await appwrite.onLogin(email, password)
+                                    isLoggedIn = true
+                                    errorMessage = nil
+                                } catch let error as AppwriteError {
+                                    errorMessage = "Login failed: \(error.message)"
+                                } catch {
+                                    errorMessage = "Unexpected error: \(error.localizedDescription)"
+                                }
+                            }
+                        }
+                    } else {
+                        SignupForm { email, password, name in
+                            Task {
+                                do {
+                                    _ = try await appwrite.onRegister(email, password, name)
+                                    isLoggedIn = false
+                                    errorMessage = nil
+                                } catch let error as AppwriteError {
+                                    errorMessage = "Login failed: \(error.message)"
+                                } catch {
+                                    errorMessage = "Unexpected error: \(error.localizedDescription)"
+                                }
+                            }
+                            
                         }
                     }
                 }
-                .padding()
-                .buttonStyle(.bordered)
-                //                }
-                
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.primaryBgColor)
-            .ignoresSafeArea()
-            .padding()
-            .navigationDestination(isPresented: $isLoggedIn) {
-                HomeView()
             }
             
+            if let errorMessage {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+                    .padding(.top, 8)
+            }
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(.hidden, for: .navigationBar)
-        .toolbarBackground(Color.clear, for: .navigationBar)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .ignoresSafeArea()
+        .background(Color.primaryBgColor)
+        .onAppear {
+            Task {
+                isLoggedIn = await appwrite.checkSession() 
+                isLoading = false
+            }
+        }
     }
 }

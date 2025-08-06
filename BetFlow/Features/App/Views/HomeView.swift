@@ -8,25 +8,31 @@
 import SwiftUI
 
 struct HomeView: View {
+    var onLogout: () -> Void
     var body: some View {
+//        Button("Logout") {
+//            onLogout()
+//        }
+//        .padding()
+//        .buttonStyle(.bordered)
         TabView {
             MatchesView()
                 .tabItem {
-                    Label("Zakłady", systemImage: "tennisball.fill")
+                    Label("Upcoming", systemImage: "tennisball.fill")
                 }
             StatsView()
                 .tabItem {
-                    Label("Statystyki", systemImage: "chart.bar")
+                    Label("Stats", systemImage: "chart.bar")
                 }
             
             BetsView()
                 .tabItem{
-                    Label("Zakłady", systemImage: "note")
+                    Label("Bets", systemImage: "note")
                 }
             
             ProfileView()
                 .tabItem {
-                    Label("Profil", systemImage: "person")
+                    Label("Profile", systemImage: "person")
                 }
 //            LoginView()
 //                .tabItem {
@@ -36,6 +42,6 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    HomeView()
-}
+//#Preview {
+//    HomeView()
+//}
