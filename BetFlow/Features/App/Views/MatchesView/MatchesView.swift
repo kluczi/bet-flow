@@ -14,9 +14,9 @@ struct MatchesView: View {
         NavigationStack {
             Group {
                 if vm.isLoading {
-                    ProgressView("Ładowanie...")
+                    ProgressView("Loading...")
                 } else if let err = vm.errorMessage {
-                    Text("Błąd: \(err)")
+                    Text("err: \(err)")
                         .foregroundColor(.red)
                 } else {
                     List(vm.events) { event in
