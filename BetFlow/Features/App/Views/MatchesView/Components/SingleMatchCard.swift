@@ -40,6 +40,7 @@ struct SingleMatchCard:View {
                 .background(
                     RoundedRectangle(cornerRadius: 12)
                         .foregroundStyle(Color.primaryBgColor)
+                        .frame(maxWidth:250)
                 )
                 Spacer()
                 Text("vs")
@@ -64,6 +65,7 @@ struct SingleMatchCard:View {
                 .background(
                     RoundedRectangle(cornerRadius: 12)
                         .foregroundStyle(Color.primaryBgColor)
+                        .frame(maxWidth:250)
                 )
     
                 Spacer()
