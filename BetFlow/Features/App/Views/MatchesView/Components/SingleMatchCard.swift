@@ -11,10 +11,10 @@ struct SingleMatchCard:View {
     let event: String
     let player1: String
     let player2: String
-    let odds1: String
-    let odds2: String
+    let odds1: Double
+    let odds2: Double
     var body: some View {
-        VStack(alignment: .center) {
+        VStack(alignment: .leading) {
             HStack (alignment: .center, spacing: 6) {
                 Image(event.contains("ATP") ? "AtpIcon" : "WtaIcon")
                     .resizable()
@@ -32,7 +32,7 @@ struct SingleMatchCard:View {
                         .foregroundStyle(Color.primaryFontColor)
                         .font(.system(size: 20))
                         .fontWeight(.medium)
-                    Text(odds1)
+                    Text(String(format: "%.2f", odds1))
                         .foregroundStyle(Color.secondaryFontColor)
                         .font(.system(size: 16))
                 }
@@ -56,7 +56,7 @@ struct SingleMatchCard:View {
                         .foregroundStyle(Color.primaryFontColor)
                         .font(.system(size: 20))
                         .fontWeight(.medium)
-                    Text(odds2)
+                    Text(String(format: "%.2f", odds2))
                         .foregroundStyle(Color.secondaryFontColor)
                         .font(.system(size: 16))
                 }
@@ -83,6 +83,6 @@ struct SingleMatchCard:View {
 #Preview {
     ZStack {
         Color.primaryBgColor.ignoresSafeArea()
-        SingleMatchCard(event: "ATP Washington", player1: "Ben Shelton",player2: "Jannik Sinner", odds1: "2.02", odds2: "1.46")
+        SingleMatchCard(event: "ATP Washington", player1: "Ben Shelton",player2: "Jannik Sinner", odds1: 2.02, odds2: 1.46)
     }
 }
