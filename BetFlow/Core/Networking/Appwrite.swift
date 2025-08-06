@@ -61,5 +61,16 @@ class Appwrite {
         )
     }
     
+    public func checkSession() async -> Bool {
+        do {
+            _ = try await account?.get()
+            return true
+        } catch {
+            return false
+        }
+    }
+    
+    
+    
 }
 
